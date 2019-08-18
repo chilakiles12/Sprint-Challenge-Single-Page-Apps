@@ -12,33 +12,47 @@ const panes = [
   {
     menuItem: 'Homepage',
     render: () => (
-      <Tab.Pane>
-        <h2>Home Page</h2>
-      </Tab.Pane>
+      <div>
+        <Icon name="home" />
+        <Tab.Pane>
+          <h2>Home Page</h2>
+        </Tab.Pane>
+      </div>
     )
   },
   {
     menuItem: 'Characters',
     render: () => (
-      <Tab.Pane>
-        <CharacterList />
-      </Tab.Pane>
+      <div>
+        <Icon name="group" />
+        <Tab.Pane>
+          <CharacterList />
+        </Tab.Pane>
+      </div>
     )
   },
   {
     menuItem: 'Location',
     render: () => (
-      <Tab.Pane>
-        <LocationList />
-      </Tab.Pane>
+      <div>
+        <Icon name="location arrow" />
+        <Tab.Pane>
+          <LocationList />
+        </Tab.Pane>
+      </div>
     )
   },
   {
     menuItem: 'Episodes',
     render: () => (
-      <Tab.Pane>
-        <EpisodeList />
-      </Tab.Pane>
+      <div>
+        <div>
+          <Icon name="tv" />
+          <Tab.Pane>
+            <EpisodeList />
+          </Tab.Pane>
+        </div>
+      </div>
     )
   }
 ];

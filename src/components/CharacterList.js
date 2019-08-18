@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Icon } from 'semantic-ui-react';
+
 import CharacterCard from './CharacterCard';
 
 export default function CharacterList() {
