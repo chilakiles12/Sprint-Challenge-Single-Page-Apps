@@ -2,6 +2,7 @@ import React from 'react';
 import { Tab, Menu, Icon } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
+import Home from './Home';
 import CharacterList from './CharacterList';
 import EpisodeList from './EpisodeList';
 import LocationList from './LocationsList';
@@ -12,47 +13,45 @@ const panes = [
   {
     menuItem: 'Homepage',
     render: () => (
-      <div>
+      <NavLink>
         <Icon name="home" />
         <Tab.Pane>
-          <h2>Home Page</h2>
+          <Home />
         </Tab.Pane>
-      </div>
+      </NavLink>
     )
   },
   {
     menuItem: 'Characters',
     render: () => (
-      <div>
+      <NavLink>
         <Icon name="group" />
         <Tab.Pane>
           <CharacterList />
         </Tab.Pane>
-      </div>
+      </NavLink>
     )
   },
   {
     menuItem: 'Location',
     render: () => (
-      <div>
+      <NavLink>
         <Icon name="location arrow" />
         <Tab.Pane>
           <LocationList />
         </Tab.Pane>
-      </div>
+      </NavLink>
     )
   },
   {
     menuItem: 'Episodes',
     render: () => (
-      <div>
-        <div>
-          <Icon name="tv" />
-          <Tab.Pane>
-            <EpisodeList />
-          </Tab.Pane>
-        </div>
-      </div>
+      <NavLink>
+        <Icon name="tv" />
+        <Tab.Pane>
+          <EpisodeList />
+        </Tab.Pane>
+      </NavLink>
     )
   }
 ];
