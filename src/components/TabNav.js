@@ -11,21 +11,21 @@ import LocationList from './LocationsList';
 
 const panes = [
   {
-    menuItem: 'Homepage',
+    menuItem: { key: 'home', icon: 'home', content: 'Home' },
     render: () => (
       <NavLink>
-        <Icon name="home" />
-        <Tab.Pane>
-          <Home />
-        </Tab.Pane>
+        <NavLink>
+          <Tab.Pane>
+            <Home />
+          </Tab.Pane>
+        </NavLink>
       </NavLink>
     )
   },
   {
-    menuItem: 'Characters',
+    menuItem: { key: 'characters', icon: 'group', content: 'Characters' },
     render: () => (
       <NavLink>
-        <Icon name="group" />
         <Tab.Pane>
           <CharacterList />
         </Tab.Pane>
@@ -33,10 +33,9 @@ const panes = [
     )
   },
   {
-    menuItem: 'Location',
+    menuItem: { key: 'location', icon: 'location arrow', content: 'Location' },
     render: () => (
       <NavLink>
-        <Icon name="location arrow" />
         <Tab.Pane>
           <LocationList />
         </Tab.Pane>
@@ -44,7 +43,7 @@ const panes = [
     )
   },
   {
-    menuItem: 'Episodes',
+    menuItem: { key: 'episodes', icon: 'tv', content: 'EpisodesList' },
     render: () => (
       <NavLink>
         <Icon name="tv" />
